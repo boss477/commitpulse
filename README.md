@@ -258,21 +258,22 @@ URL Parameter > Theme Default > System Fallback
 
 ### Theme Presets
 
-| Theme              | Preview                     | `bg`     | `accent` | `text`   |
-| ------------------ | --------------------------- | -------- | -------- | -------- |
-| `auto`             | System light / dark         | _adapts_ | _adapts_ | _adapts_ |
-| `dark` _(default)_ | GitHub dark                 | `0d1117` | `58a6ff` | `c9d1d9` |
-| `neon`             | Cyberpunk                   | `000000` | `ff00ff` | `00ffcc` |
-| `dracula`          | Dracula Pro                 | `282a36` | `bd93f9` | `f8f8f2` |
-| `github`           | GitHub green                | `0d1117` | `39d353` | `ffffff` |
-| `light`            | Clean & minimal             | `ffffff` | `0969da` | `24292f` |
-| `gruvbox`          | Retro warm dark             | `282828` | `fe8019` | `ebdbb2` |
-| `random`           | Surprise theme on reload    | _varies_ | _varies_ | _varies_ |
-| `highcontrast`     | Accessibility high contrast | `0a0a0a` | `ff4500` | `ffffff` |
-| `cyber-pulse`      | AMOLED true-black & cyan    | `000000` | `00ffee` | `ffffff` |
-| `obsidian`         | Deep charcoal & amber gold  | `1a1a2e` | `f59e0b` | `e2e8f0` |
-| `glacier`          | Icy sky blue & cyan         | `e0f2fe` | `06b6d4` | `0369a1` |
-| `lumos`            | Void black & mint gold      | `0a0a0a` | `fbbf24` | `a7f3d0` |
+| Theme              | Preview                      | `bg`     | `accent` | `text`   |
+| ------------------ | ---------------------------- | -------- | -------- | -------- |
+| `auto`             | System light / dark          | _adapts_ | _adapts_ | _adapts_ |
+| `dark` _(default)_ | GitHub dark                  | `0d1117` | `58a6ff` | `c9d1d9` |
+| `neon`             | Cyberpunk                    | `000000` | `ff00ff` | `00ffcc` |
+| `dracula`          | Dracula Pro                  | `282a36` | `bd93f9` | `f8f8f2` |
+| `github`           | GitHub green                 | `0d1117` | `39d353` | `ffffff` |
+| `light`            | Clean & minimal              | `ffffff` | `0969da` | `24292f` |
+| `gruvbox`          | Retro warm dark              | `282828` | `fe8019` | `ebdbb2` |
+| `random`           | Surprise theme on reload     | _varies_ | _varies_ | _varies_ |
+| `highcontrast`     | Accessibility high contrast  | `0a0a0a` | `ff4500` | `ffffff` |
+| `cyber-pulse`      | AMOLED true-black & cyan     | `000000` | `00ffee` | `ffffff` |
+| `obsidian`         | Deep charcoal & amber gold   | `1a1a2e` | `f59e0b` | `e2e8f0` |
+| `glacier`          | Icy sky blue & cyan          | `e0f2fe` | `06b6d4` | `0369a1` |
+| `lumos`            | Void black & mint gold       | `0a0a0a` | `fbbf24` | `a7f3d0` |
+| `tokyo_night`      | Deep navy & soft pastel blue | `1a1b26` | `7aa2f7` | `c0caf5` |
 
 > **`auto` uses CSS `@media (prefers-color-scheme)`** inside the SVG so the badge switches between the `light` and `dark` palettes based on the viewer's OS setting — no JavaScript required. This is ideal for GitHub profile READMEs where visitors may use either mode.
 
