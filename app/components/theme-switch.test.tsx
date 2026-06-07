@@ -156,7 +156,7 @@ describe('useThemeToggle hook', () => {
     expect(result.current.isDark).toBe(false);
 
     // Clean up
-    delete (document as never).startViewTransition;
+    delete (document as unknown as Record<string, unknown>).startViewTransition;
   });
 });
 
