@@ -1,49 +1,5 @@
 import '@testing-library/jest-dom';
 
-const originalFetch = globalThis.fetch;
-
-// Global fallback for fetch to prevent real network requests during testing
-const globalFetchFallback = async (
-  input?: RequestInfo | URL,
-  init?: RequestInit
-): Promise<Response> => {
-  const url =
-    typeof input === 'string'
-      ? input
-      : input && 'url' in input
-        ? input.url
-        : input?.toString() || '';
-
-  if (url.includes('github.com') || url.includes('api.github.com')) {
-    return new Response(
-      JSON.stringify([
-        {
-          id: 1,
-          login: 'test-user',
-          avatar_url: 'https://example.com/avatar.png',
-          contributions: 15,
-          html_url: 'https://github.com/test-user',
-        },
-      ]),
-      {
-        status: 200,
-        headers: {
-          'x-ratelimit-remaining': '60',
-          'x-ratelimit-reset': '1672531199',
-        },
-      }
-    );
-  }
-
-  return originalFetch(input!, init);
-};
-
-Object.defineProperty(globalThis, 'fetch', {
-  value: globalFetchFallback,
-  writable: true,
-  configurable: true,
-});
-
 // Custom Storage prototype override to fix Node.js v25+ experimental localStorage incompatibility with JSDOM
 if (typeof window !== 'undefined' && typeof window.Storage !== 'undefined') {
   const stores = new WeakMap<object, Map<string, string>>();
