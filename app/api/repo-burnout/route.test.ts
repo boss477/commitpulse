@@ -124,10 +124,10 @@ describe('GET /api/repo-burnout', () => {
         token: undefined,
       })
     );
-  });
-  expect(fetchBurnoutAnalysis).toHaveBeenCalledWith('octocat', 'hello-world', {
-    bypassCache: false,
-    token: undefined,
+    expect(fetchBurnoutAnalysis).toHaveBeenCalledWith('octocat', 'hello-world', {
+      bypassCache: false,
+      token: undefined,
+    });
   });
 
   it('returns 429 when GitHub API quota is low and bypassCache is requested', async () => {
